@@ -3,7 +3,7 @@ pipeline {
   agent any
   parameters{
     choice(name:'ENV',choices:['dev','staging','prod'], description: '')
-    booleanParam(name: 'executeTests', defaultvalue: true, description: '')
+    booleanParam(name: 'executeTests', defaultValue: true, description: '')
   }
      
      stages{
