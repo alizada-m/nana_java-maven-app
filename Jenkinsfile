@@ -1,6 +1,10 @@
 pipeline {
   
   agent any
+  parameters{
+    choise(name:'ENV',choices:['dev','staging','prod'], description: '')
+    booleanParam(name: 'executeTests', defaultvalue: true, description: '')
+  }
      
      stages{
         
