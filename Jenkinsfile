@@ -2,7 +2,7 @@ pipeline {
   
   agent any
   parameters{
-    choise(name:'ENV',choices:['dev','staging','prod'], description: '')
+    choice(name:'ENV',choices:['dev','staging','prod'], description: '')
     booleanParam(name: 'executeTests', defaultvalue: true, description: '')
   }
      
@@ -26,7 +26,7 @@ pipeline {
             message "Select the environment to deploy to"
             ok "Done"
             parameters {
-              choise(name: 'ENV',choices: ['dev','staging','prod'], description: '')
+              choice(name: 'ENV',choices: ['dev','staging','prod'], description: '')
             }
             
           }
